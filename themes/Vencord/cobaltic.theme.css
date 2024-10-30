@@ -1,0 +1,235 @@
+/**
+ * @name Cobaltic
+ * @author Mystjc
+ * @description Stylistic color scheme
+ * @source https://github.com/mystjc/cobaltic-themes/
+*/
+
+:root {
+    --main-txt-color: #b3c8e1;
+    --alt-txt-color:  #8fb2f1;
+    --accent-color:   #4586c4;
+
+    --panel-fg-color: #34465c;
+    --panel-mg-color: #293544;
+    --panel-bg-color: #242f3b;
+
+    --color1:  #de5c59;
+    --color2:  #9dd470;
+    --color3:  #dfb55d;
+    --color4:  #6799d5;
+    --color5:  #c772d2;
+    --color6:  #67b6d1;
+    --color7:  #aac2df;
+
+    --color9:  #ee6a65;
+    --color10: #ace37e;
+    --color11: #eec36a;
+    --color12: #76a6e4;
+    --color13: #d580e0;
+    --color14: #76c4e0;
+    --color15: #c2ddff;
+}
+
+.theme-dark,
+.theme-light {
+    --header-primary: var(--main-txt-color);
+    --header-secondary: var(--alt-txt-color);
+    --text-normal: var(--main-txt-color);
+    --text-muted: var(--color7);
+    --text-link: var(--accent-color);
+    --text-link-low-saturation: var(--color6);
+    --text-positive: var(--color2);
+    --text-warning: var(--color3);
+    --text-danger: var(--color1);
+    --text-brand: var(--color4);
+    --background-primary: var(--panel-bg-color);
+    --background-secondary: var(--panel-mg-color);
+    --background-secondary-alt: var(--panel-mg-color); /* change search bar to fg color */
+    --background-tertiary: var(--panel-bg-color);
+    --background-accent: var(--accent-color);
+    
+    /* --background-floating: #141520;
+    --background-nested-floating: #1e2030;
+    --background-mobile-primary: #24273a;
+    --background-mobile-secondary: #1e2030;
+    --chat-background: #24273a;
+    --chat-border: #181926;
+    --chat-input-container-background: #24273a; */
+
+    --background-modifier-hover: var(--panel-fg-color);
+    --background-modifier-selected: var(--accent-color);
+    --background-modifier-accent: var(--panel-fg-color);
+    --background-modifier-active: var(--accent-color);
+    
+    /* --info-positive-background: rgba(166, 218, 149, 0.15);
+    --info-positive-foreground: #a6da95;
+    --info-positive-text: #cad3f5;
+    --info-warning-background: rgba(238, 212, 159, 0.15);
+    --info-warning-foreground: #eed49f;
+    --info-warning-text: #cad3f5;
+    --info-danger-background: rgba(237, 135, 150, 0.15);
+    --info-danger-foreground: #ed8796;
+    --info-danger-text: #cad3f5;
+    --info-help-background: rgba(145, 215, 227, 0.15);
+    --info-help-foreground: #91d7e3;
+    --info-help-text: #cad3f5;
+    --status-positive-background: #a6da95;
+    --status-positive-text: #24273a;
+    --status-warning-background: #eed49f;
+    --status-warning-text: #24273a;
+    --status-danger-background: #ed8796;
+    --status-danger-text: #24273a;
+    --status-danger: #ed8796;
+    --status-positive: #a6da95;
+    --status-warning: #eed49f;
+    --status-yellow-400: #eed49f;
+    --status-green-600: #a6da95;
+    --primary-dark-600: #24273a;
+    --status-yellow-560: #eed49f;
+    --status-red-500: #ed8796;
+    --status-red-530: #ed8796;
+    --status-yellow-500: #eed49f; */
+
+    --black-500: var(--panel-bg-color);
+    --green-360: var(--color2);
+    --yellow-360: var(--color3);
+    --yellow-300: var(--color3);
+    --red-400: var(--color1);
+    --brand-500: var(--color12);
+    --brand-560: var(--color4);
+    --primary-100: var(--color7);
+    --primary-300: var(--color7);
+    --primary-400: var(--color7);
+    --primary-dark-700: black;
+    --primary-800: black;
+    --white-400: var(--color15);
+    --white-500: var(--color15);
+
+    /* --guild-boosting-pink: #f5bde6;
+    --premium-perk-yellow: #eed49f;
+    --premium-perk-purple: #c6a0f6;
+    --premium-perk-dark-blue: #5b8cf0;
+    --premium-perk-light-blue: #a1bdf6;
+    --premium-perk-blue: #8aadf4;
+    --premium-perk-green: #a6da95;
+    --premium-perk-pink: #f5bde6;
+    --premium-perk-orange: #f5a97f;
+    --status-green-400: #a6da95;
+    --button-danger-background: #ed8796;
+    --button-danger-background-hover: #ea7183;
+    --button-danger-background-active: #6794f1;
+    --button-danger-background-disabled: #ed8796;
+    --button-positive-background: #a6da95;
+    --button-positive-background-hover: #96d382;
+    --button-positive-background-active: #8ed079;
+    --button-positive-background-disabled: #a6da95;
+    --button-secondary-background: #494d64;
+    --button-secondary-background-hover: #3e4255;
+    --button-secondary-background-active: #3e4255;
+    --button-secondary-background-disabled: #494d64;
+    --button-outline-danger-text: #cad3f5;
+    --button-outline-danger-border: #ed8796;
+    --button-outline-danger-background: transparent;
+    --button-outline-danger-background-hover: #eb7c8c;
+    --button-outline-danger-text-hover: #24273a;
+    --button-outline-danger-border-hover: #eb7c8c;
+    --button-outline-danger-background-active: #ea7183;
+    --button-outline-danger-text-active: #24273a;
+    --button-outline-danger-border-active: #eb7c8c;
+    --button-outline-positive-text: #cad3f5;
+    --button-outline-positive-border: #a6da95;
+    --button-outline-positive-background: transparent;
+    --button-outline-positive-background-hover: #9ed78c;
+    --button-outline-positive-text-hover: #24273a;
+    --button-outline-positive-border-hover: #9ed78c;
+    --button-outline-positive-background-active: #96d382;
+    --button-outline-positive-text-active: #24273a;
+    --button-outline-positive-border-active: #9ed78c;
+    --button-outline-brand-text: #cad3f5;
+    --button-outline-brand-border: #8aadf4;
+    --button-outline-brand-background: transparent;
+    --button-outline-brand-background-hover: #7ea5f3;
+    --button-outline-brand-text-hover: #24273a;
+    --button-outline-brand-border-hover: #7ea5f3;
+    --button-outline-brand-background-active: #739df2;
+    --button-outline-brand-text-active: #24273a;
+    --button-outline-brand-border-active: #7ea5f3;
+    --button-outline-primary-text: #cad3f5;
+    --button-outline-primary-border: #5b6078;
+    --button-outline-primary-background: transparent;
+    --button-outline-primary-background-hover: #565a71;
+    --button-outline-primary-text-hover: #24273a;
+    --button-outline-primary-border-hover: #565a71;
+    --button-outline-primary-background-active: #505469;
+    --button-outline-primary-text-active: #24273a;
+    --button-outline-primary-border-active: #565a71;
+    --modal-background: #24273a;
+    --modal-footer-background: #181926; */
+
+    --scrollbar-thin-thumb: var(--panel-fg-color);
+    --scrollbar-thin-track: transparent;
+    --scrollbar-auto-thumb: var(--panel-fg-color);
+    --scrollbar-auto-track: var(--panel-mg-color);
+    --scrollbar-auto-scrollbar-color-thumb: var(--panel-fg-color);
+    --scrollbar-auto-scrollbar-color-track: var(--panel-mg-color);
+
+    --input-background: var(--panel-fg-color);
+    --input-placeholder-text: var(--color7);
+
+    /* --logo-primary: #cad3f5;
+    --control-brand-foreground: #8aadf4;
+    --control-brand-foreground-new: #8aadf4;
+    --mention-foreground: var(--main-txt-color);
+    --mention-background: var(--accent-color);
+    --background-mentioned: rgba(238, 212, 159, 0.1);
+    --background-mentioned-hover: rgba(238, 212, 159, 0.08);
+    --background-message-hover: rgba(24, 25, 38, 0.25);
+    --background-message-automod: rgba(244, 219, 214, 0.05);
+    --background-message-automod-hover: rgba(244, 219, 214, 0.1);
+    --background-message-highlight: rgba(138, 173, 244, 0.1);
+    --background-message-highlight-hover: rgba(138, 173, 244, 0.08); */
+    
+    --channels-default: var(--color7);
+    --channel-icon: var(--color7);
+    --channel-text-area-placeholder: var(--color15);
+    --channeltextarea-background: var(--panel-fg-color);
+
+    /* --activity-card-background: #181926;
+    --textbox-markdown-syntax: #6e738d;
+    --spoiler-revealed-background: #363a4f;
+    --spoiler-hidden-background: #5b6078;
+    --android-navigation-bar-background: #181926;
+    --android-ripple: rgba(24, 25, 38, 0.3);
+    --deprecated-card-bg: rgba(24, 25, 38, 0.6);
+    --deprecated-card-editable-bg: rgba(24, 25, 38, 0.3); */
+
+    /* --bg-mod-faint: #1e2030;
+    --deprecated-store-bg: #24273a;
+    --deprecated-quickswitcher-input-background: #505469;
+    --deprecated-quickswitcher-input-placeholder: rgba(24, 25, 38, 0.3);
+    --deprecated-text-input-bg: #181926;
+    --deprecated-text-input-border: rgba(24, 25, 38, 0.3);
+    --deprecated-text-input-border-hover: #0e0f16;
+    --deprecated-text-input-border-disabled: #1e2030;
+    --deprecated-text-input-prefix: #a5adcb;
+    --focus-primary: #8aadf4;
+    --interactive-normal: #cad3f5;
+    --interactive-muted: rgba(202, 211, 245, 0.3);
+    --interactive-hover: #cad3f5;
+    --interactive-active: #cad3f5;
+    --search-popout-option-non-text-color: #a5adcb; */
+
+    --__spoiler-background-color--hidden: var(--panel-mg-color);
+    --__spoiler-warning-background-color: var(--panel-mg-color);
+}
+
+::selection {
+    color: white !important;
+    background-color: var(--accent-color) !important;
+}
+
+a[href="https://support.discord.com"]
+{
+	display: none;
+}

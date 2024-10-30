@@ -1,0 +1,599 @@
+/* For styling the entire Joplin app, except the rendered Markdown */
+
+/*********************************************************
+ * Variables
+ *********************************************************/
+
+:root {
+  --main-txt-color: #b3c8e1;
+  --alt-txt-color:  #8fb2f1;
+  --accent-color:   #4586c4;
+
+  --panel-fg-color: #344a5e;
+  --panel-mg-color: #2b3947;
+  --panel-bg-color: #242f3b;
+}
+
+/*********************************************************
+ * Content
+ *********************************************************/
+
+/* Icons and Labels */
+.fa,
+.fas,
+.sidebar .icon-notebooks,
+.sidebar .icon-notebooks~span,
+.icon-notes,
+.icon-notes~a,
+.icon-tags,
+.icon-tags~span,
+.fa-plus,
+.sidebar .title,
+.sidebar .note-count,
+.sidebar .tag-label,
+.sidebar .note-count-label,
+.fa-share-square,
+.fa-calendar-alt,
+.icon-back,
+.icon-forward,
+.icon-share,
+.icon-bold,
+.icon-italic,
+.icon-link,
+.icon-code,
+.icon-attachment,
+.icon-bulleted-list,
+.icon-numbered-list,
+.icon-to-do-list,
+.icon-heading,
+.icon-add-date,
+.icon-info,
+.icon-layout,
+.icon-alarm {
+  color: var(--main-txt-color) !important;
+}
+
+/* Plugins */
+.fa-chevron-up,
+.fa-chevron-down,
+.fa-hand-point-left,
+.fa-caret-down,
+.fa-hashtag {
+  color: var(--main-txt-color) !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar-thumb {
+  background-color: var(--panel-fg-color) !important;
+}
+
+/*********************************************************
+ * Panels
+ *********************************************************/
+
+/* Main Panel */
+.resizableLayoutItem>div {
+  background-color: var(--panel-bg-color) !important;
+}
+
+/* Sidebar Panel */
+.resizableLayoutItem .rli-sideBar {
+  background-color: var(--panel-bg-color) !important;
+}
+
+/* Sidebar Folders/Tags Panel */
+.sidebar {
+  background-color: var(--panel-bg-color) !important;
+}
+
+.rli-noteList>div>div {
+  border-radius: 5px;
+}
+
+/* Notes List Top Panel */
+.rli-noteList>div>div>div {
+  background-color: var(--panel-mg-color) !important;
+  border: none;
+}
+
+/* Notes List Bottom Panel */
+.rli-noteList>div>div>div~div {
+  background-color: var(--panel-mg-color) !important;
+  border: none;
+}
+
+/* Panel Divider */
+div:has(>iframe) {
+  border: 5px !important;
+  border-color: var(--panel-bg-color) !important;
+}
+
+/*********************************************************
+ * Sidebar
+ *********************************************************/
+
+/* Folders */
+.list-item>span {
+  color: var(--main-txt-color) !important;
+}
+
+.all-notes {
+  color: var(--main-txt-color) !important;
+  background-color: var(--panel-bg-color) !important;
+}
+
+.list-item-container[data-folder-id].selected {
+  background-color: var(--accent-color) !important;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+.list-item-container[data-folder-id].selected:hover {
+  background-color: var(--accent-color) !important;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+.list-item-container[data-folder-id]:hover {
+  background-color: var(--panel-fg-color) !important;
+  border-radius: 5px;
+}
+
+/* Tags */
+div:has(>div>i[class*="icon-tags"])~div {
+  margin-left: 4px !important;
+}
+
+a.list-item[data-type="5"] {
+  flex: 0;
+  padding: 0px 6px;
+  min-height: 0px;
+  line-height: 0px;
+}
+
+.list-item-container[data-tag-id] {
+  height: 20px;
+  display: inline-block;
+  background: var(--panel-fg-color) !important;
+  border-radius: 20px;
+  margin: 4px 4px;
+  min-height: 0px !important;
+  padding-bottom: 4px !important;
+  padding: 10px 5px !important;
+}
+
+.list-item-container[data-tag-id]:hover {
+  height: 20px;
+  display: inline-block;
+  background: var(--accent-color) !important;
+  border-radius: 20px;
+  margin: 4px 4px;
+  min-height: 0px !important;
+  padding-bottom: 4px !important;
+  padding: 10px 5px !important;
+}
+
+/* Sync Area */
+.sidebar>div:last-of-type {
+  background-color: none !important;
+}
+
+.sidebar>div:last-of-type>div>div {
+  color: var(--main-txt-color) !important;
+  opacity: 0.7;
+}
+
+.sidebar>div:last-of-type>button {
+  background-color: var(--panel-fg-color) !important;
+  border: 0px;
+}
+
+.sidebar>div:last-of-type>button:hover {
+  background-color: var(--accent-color) !important;
+}
+
+.sidebar>div:last-of-type>button>span {
+  color: var(--main-txt-color) !important;
+  opacity: 1;
+}
+
+/*********************************************************
+ * Notes List
+ *********************************************************/
+
+/* Notes List Buttons */
+.new-note-button,
+.new-todo-button,
+.sort-order-field-button,
+.sort-order-reverse-button {
+  background-color: var(--panel-fg-color) !important;
+  border-color: var(--panel-fg-color) !important;
+  opacity: 1;
+}
+
+.new-note-button:hover,
+.new-todo-button:hover,
+.sort-order-field-button:hover,
+.sort-order-reverse-button:hover {
+  background-color: var(--accent-color) !important;
+  border-color: var(--panel-fg-color) !important;
+  opacity: 1;
+}
+
+.new-note-button>span,
+.new-todo-button>span,
+.sort-order-field-button>span,
+.sort-order-reverse-button>span {
+  color: var(--main-txt-color) !important;
+  opacity: 1;
+}
+
+/* Notes List Search */
+.search-bar>div {
+  background-color: var(--panel-fg-color) !important;
+  border: transparent !important;
+  border-radius: 5px;
+}
+
+.search-bar>div>input,
+.search-bar>div>input::placeholder,
+.icon-search {
+  color: var(--main-txt-color) !important;
+  background-color: var(--panel-fg-color) !important;
+  border: transparent !important;
+  opacity: 1;
+}
+
+.search-and-sort>div~div>button {
+  background-color: var(--panel-fg-color) !important;
+  border-color: var(--panel-fg-color) !important;
+  opacity: 1;
+}
+
+.search-and-sort>div~div>button>span {
+  color: var(--main-txt-color) !important;
+  opacity: 1;
+}
+
+.emptylist {
+  color: var(--main-txt-color) !important;
+  background-color: var(--panel-mg-color) !important;
+}
+
+span>mark {
+  color: var(--main-txt-color) !important;
+  background-color: transparent !important;
+}
+
+/* Lists of Notes */
+.note-list .list-item-container {
+  background-color: var(--panel-mg-color) !important;
+}
+
+.note-list .list-item-container:hover {
+  background-color: var(--panel-fg-color) !important;
+}
+
+.item-list.note-list .list-item-container::before {
+  border: none !important;
+}
+
+.note-list .list-item-container a {
+  color: var(--main-txt-color) !important;
+  opacity: 1;
+}
+
+.note-list .list-item-container a:hover {
+  color: var(--main-txt-color) !important;
+  opacity: 1;
+}
+
+.selected.todo-list-item>div,
+.selected.todo-list-item>div~a,
+.selected.note-list-item>a {
+  color: var(--main-txt-color) !important;
+  background-color: var(--accent-color) !important;
+  opacity: 1;
+}
+
+/* Add "..." to Notes with Long Titles */
+.item-list.note-list .list-item-container>a>span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content>div>span,
+.content.-selected>div>span {
+  color: var(--main-txt-color) !important;
+}
+
+.dragcursor,
+.content.-selected {
+  background-color: var(--accent-color) !important;
+  border-radius: 5px;
+}
+
+.dragcursor:hover,
+.content.-selected:hover {
+  background-color: var(--accent-color) !important;
+  border-radius: 5px;
+}
+
+.note-list-item::before {
+  border-bottom: transparent !important;
+}
+
+.note-list-item:hover {
+  background-color: var(--panel-fg-color) !important;
+  border-radius: 5px;
+}
+
+/*********************************************************
+ * Dialogs
+ *********************************************************/
+
+/* Tags */
+.modal-dialog {
+  background-color: var(--panel-mg-color) !important;
+  border-radius: 5px;
+}
+
+.modal-dialog>label {
+  color: var(--main-txt-color) !important;
+}
+
+.tag-selector {
+  background-color: var(--panel-bg-color) !important;
+  border-radius: 5px;
+}
+
+.modal-dialog>div~div>button {
+  color: var(--main-txt-color) !important;
+  background-color: var(--panel-fg-color) !important;
+  border-color: var(--panel-fg-color) !important;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+.modal-dialog>div~div>button:hover {
+  color: var(--main-txt-color) !important;
+  background-color: var(--accent-color) !important;
+  border-color: var(--panel-fg-color) !important;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+/* Create Notebook */
+.master-password-dialog>div,
+.dialog-root,
+.dialog-content {
+  background-color: var(--panel-mg-color) !important;
+}
+
+.dialog-root>div,
+.dialog-root>div~div~div>button {
+  color: var(--main-txt-color) !important;
+}
+
+.dialog-root>div~div~div>button {
+  background-color: var(--panel-fg-color) !important;
+  border: transparent !important;
+}
+
+.dialog-root>div~div~div>button:hover {
+  background-color: var(--accent-color) !important;
+  border: transparent !important;
+}
+
+.form-input-group>label,
+.form-input-group>div>button>span {
+  color: var(--main-txt-color) !important;
+}
+
+.form-input-group>div>button {
+  background-color: var(--panel-fg-color) !important;
+  border: transparent !important;
+}
+
+.form-input-group>div>button:hover {
+  background-color: var(--accent-color) !important;
+  border: transparent !important;
+}
+
+/* Command Palette */
+.item-list div {
+  color: var(--main-txt-color) !important;
+}
+
+.item-list .selected {
+  color: var(--accent-color) !important;
+}
+
+/*********************************************************
+ * Editor
+ *********************************************************/
+
+/* TITLE */
+.title-input {
+  color: var(--main-txt-color) !important;
+  background-color: var(--panel-bg-color) !important;
+}
+
+.updated-time-label {
+  color: var(--main-txt-color) !important;
+  opacity: 0.5;
+}
+
+.sc-ikkxIA.hLzWZa>div {
+  background-color: var(--panel-bg-color) !important;
+}
+
+.editor-toolbar {
+  background-color: var(--panel-fg-color) !important;
+  border-radius: 5px;
+}
+
+.resizableLayoutItem>div>div>div>.sc-dAbbOL>div>div {
+  background-color: var(--panel-bg-color) !important;
+}
+
+.editor-toolbar>div>a:hover {
+  background-color: var(--accent-color) !important;
+  opacity: 1;
+}
+
+/* Hide "Spell checker" Button */
+.editor-toolbar a[title="Spell checker"] {
+  display: none !important;
+}
+
+/* Hide "Markdown/Richtext editor" Button */
+.tox-tbtn {
+  display: none !important;
+}
+
+/* NOTE SEARCH BAR */
+.note-search-bar,
+.note-search-bar>div>div {
+  color: var(--main-txt-color) !important;
+  background-color: var(--panel-fg-color) !important;
+  border: transparent !important;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.note-search-bar input {
+  color: var(--main-txt-color) !important;
+  background-color: var(--panel-mg-color) !important;
+  border: 0;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+.note-search-bar input::placeholder {
+  color: var(--main-txt-color) !important;
+}
+
+/* TAGS */
+.tag-bar {
+  background-color: transparent !important;
+}
+
+.tag-bar>a:hover {
+  color: var(--main-txt-color) !important;
+  background-color: var(--accent-color) !important;
+}
+
+.tag-list>button {
+  color: var(--main-txt-color) !important;
+  background-color: var(--panel-fg-color) !important;
+}
+
+/* Hide "Click to add tags..." */
+a[Title="Tags"]+div>span {
+  display: none !important;
+}
+
+/*********************************************************
+ * Editor (CODE MIRROR)
+ *********************************************************/
+
+/* Editer Background */
+.CodeMirror-lines,
+.CodeMirror-vscrollbar,
+.CodeMirror-scroll {
+  background-color: var(--panel-bg-color) !important;
+}
+
+/* Editer Text Color */
+span[role="presentation"] {
+  color: var(--main-txt-color) !important;
+}
+
+/* Header */
+.cm-header {
+  color: var(--alt-txt-color) !important;
+}
+
+/* Italics/Emphasis, Bold, Bold-Italics */
+.cm-em,
+.cm-strong,
+.cm-strong.cm-em {
+  color: var(--alt-txt-color) !important;
+}
+
+/* Lists (Bullet/Number/Todo) */
+.cm-variable-2,
+.cm-variable-3,
+.cm-keyword {
+  color: var(--main-txt-color) !important;
+}
+
+/* Lists (Italics/Emphasis, Bold, Bold-Italics) */
+.cm-em.cm-variable-2,
+.cm-strong.cm-variable-2,
+.cm-strong.cm-em.cm-variable-2,
+.cm-em.cm-variable-3,
+.cm-strong.cm-variable-3,
+.cm-strong.cm-em.cm-variable-3,
+.cm-em.cm-keyword,
+.cm-strong.cm-keyword,
+.cm-strong.cm-em.cm-keyword,
+.cm-quote,
+.cm-quote-1 {
+  color: var(--alt-txt-color) !important;
+}
+
+/* Links (Link) */
+.cm-url {
+  color: var(--alt-txt-color) !important;
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Links (Text) */
+.cm-link-text {
+  color: var(--alt-txt-color) !important;
+}
+
+/* Code (Text) */
+.cm-comment {
+  color: var(--alt-txt-color) !important;
+}
+
+/* Code (Inline) */
+.cm-comment.cm-jn-inline-code {
+  background-color: transparent !important;
+  border: transparent !important;
+}
+
+/* Code (Block) */
+.cm-jn-code-block-background {
+  background-color: var(--panel-bg-color) !important;
+}
+
+/* Horizontal Line */
+.cm-hr {
+  color: var(--panel-fg-color) !important;
+}
+
+/* Dynamic Highlighting */
+.CodeMirror-lines .CodeMirror-selected {
+  color: var(--main-txt-color) !important;
+  background: var(--accent-color) !important;
+}
+
+.CodeMirror>div:has(textarea) {
+  color: var(--main-txt-color) !important;
+}
+
+/* Search Highlighting */
+.CodeMirror-lines .cm-search-marker {
+  color: var(--main-txt-color) !important;
+  background: var(--accent-color) !important;
+}
+
+.CodeMirror-lines .cm-search-marker-selected {
+  color: var(--main-txt-color) !important;
+  background-color: transparent !important;
+}

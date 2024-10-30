@@ -1,0 +1,16 @@
+gui:
+  scrollPastBottom: false
+  showBottomLine: false
+  theme:
+    activeBorderColor:
+    - '#4586c4'
+    - bold
+    inactiveBorderColor:
+    - '#344a5e'
+    selectedLineBgColor:
+    - '#4586c4'
+    searchingActiveBorderColor:
+    - '#4586c4'
+    - bold
+  authorColors:
+    '*': '#b066b9'
