@@ -1,0 +1,84 @@
+configuration {
+  modi: "drun,window";
+  display-drun: " ";
+  display-window: " ";
+  drun-display-format: "{name}";
+  show-icons: true;
+}
+
+@theme "/dev/null"
+
+* {
+  foreground:   #b3c8e1;
+  background:   #2b3947;
+  search-bg:    #242f3b;
+  selected-bg:  #4586c4;
+
+  cursor: "default";
+  font: "CaskaydiaCove Nerd Font 10";
+  text-color: @foreground;
+  background-color: @background;
+}
+
+window {
+  location: center;
+  width: 700px;
+  border-radius: 10px;
+}
+
+mainbox {
+  padding: 10px;
+  children: ["inputbar", "listview"];
+}
+
+inputbar {
+  spacing: 5px;
+  padding: 10px;
+  border: 1px;
+  border-color: @selected-bg;
+  border-radius: 10px;
+  background-color: @search-bg;
+  children: ["prompt", "entry"];
+}
+
+prompt {
+  background-color: @search-bg;
+}
+
+entry {
+  placeholder: "Search...";
+  background-color: @search-bg;
+}
+
+listview {
+  columns: 2;
+  lines: 8;
+  cycle: true;
+  padding: 10px 0px 0px 0px;
+  children: ["element", "element-text", "element-icon"];
+}
+
+element {
+  padding: 0px 0px 0px 10px;
+}
+
+element-text {
+  padding: 10px;
+}
+
+element-icon {
+  size: 24px;
+}
+
+element.selected {
+  border-radius: 10px;
+  background-color: @selected-bg;
+}
+
+element-text.selected {
+  background-color: @selected-bg;
+}
+
+element-icon.selected {
+  background-color: @selected-bg;
+}

@@ -1,0 +1,328 @@
+/* Style for rendered Markdown */
+
+/*********************************************************
+ * Variables
+ *********************************************************/
+
+:root {
+  --main-txt-color: #b3c8e1;
+  --alt-txt-color:  #8fb2f1;
+  --accent-color:   #4586c4;
+
+  --md-fg-color:    #344a5e;
+  --md-bg-color:    #2b3947;
+  --panel-bg-color: #242f3b;
+
+  --color1:  #c3514f;
+  --color2:  #8bbb65;
+  --color3:  #c4a053;
+  --color4:  #5c87bb;
+  --color5:  #b066b9;
+  --color6:  #5ba0b7;
+  --color7:  #aac2df;
+
+  --color9:  #ee6a65;
+  --color10: #ace37e;
+  --color11: #eec36a;
+  --color12: #76a6e4;
+  --color13: #d580e0;
+  --color14: #76c4e0;
+  --color15: #c2ddff;
+}
+
+/*********************************************************
+ * Content
+ *********************************************************/
+
+#rendered-md,
+body {
+  color: var(--main-txt-color) !important;
+  background-color: var(--panel-bg-color) !important;
+  font-size: 16px !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--alt-txt-color) !important;
+  border: transparent !important;
+}
+
+/* Horizontal Rule */
+hr {
+  border-bottom: 4px solid var(--md-fg-color) !important;
+  border-radius: 1px;
+  margin: 1.5em 0;
+}
+
+/* Dynamic Highlighting */
+::selection {
+  color: var(--main-txt-color) !important;
+  background-color: var(--accent-color) !important;
+}
+
+/* Static Highlighting */
+mark,
+mark strong {
+  color: var(--main-txt-color) !important;
+  background: var(--accent-color) !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar-thumb {
+  background-color: var(--md-fg-color) !important;
+}
+
+/*********************************************************
+ * Hyperlinks
+ *********************************************************/
+
+a {
+  color: var(--accent-color) !important;
+  opacity: 1;
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+/* Joplin Icon for Joplin Links */
+.resource-icon {
+  background-color: var(--accent-color) !important;
+  opacity: 1;
+}
+
+/*********************************************************
+ * Code Blocks
+ *********************************************************/
+
+/* Code Fragments */
+pre,
+.hljs {
+  color: var(--main-txt-color) !important;
+  background-color: var(--md-bg-color) !important;
+  border-radius: 5px;
+  padding: 10px;
+  width: 95%;
+  overflow: scroll;
+}
+
+.hljs-selector-tag {
+  color: var(--color12);
+}
+
+.hljs-selector-id {
+  color: var(--color14);
+  font-weight: bold;
+}
+
+.hljs-selector-class {
+  color: var(--color14);
+}
+
+.hljs-selector-attr {
+  color: var(--color14);
+}
+
+.hljs-property {
+  color: var(--color6);
+}
+
+.hljs-selector-pseudo {
+  color: var(--color6);
+}
+
+.hljs-addition {
+  background-color: rgba(163, 190, 140, 0.5);
+}
+
+.hljs-deletion {
+  background-color: rgba(191, 97, 106, 0.5);
+}
+
+.hljs-built_in,
+.hljs-type {
+  color: var(--color14);
+}
+
+.hljs-class {
+  color: var(--color14);
+}
+
+.hljs-function {
+  color: var(--color6);
+}
+
+.hljs-title.hljs-function,
+.hljs-function>.hljs-title {
+  color: var(--color6);
+}
+
+.hljs-keyword,
+.hljs-literal,
+.hljs-symbol {
+  color: var(--color12);
+}
+
+.hljs-number {
+  color: var(--color13);
+}
+
+.hljs-regexp {
+  color: var(--color11);
+}
+
+.hljs-string {
+  color: var(--color10);
+}
+
+.hljs-title {
+  color: var(--color14);
+}
+
+.hljs-params {
+  color: var(--color15);
+}
+
+.hljs-bullet {
+  color: var(--color12);
+}
+
+.hljs-code {
+  color: var(--color14);
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-formula {
+  color: var(--color14);
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link:hover {
+  text-decoration: underline;
+}
+
+.hljs-quote {
+  color: var(--color7);
+}
+
+.hljs-comment {
+  color: var(--color7);
+}
+
+.hljs-doctag {
+  color: var(--color14);
+}
+
+.hljs-meta,
+.hljs-meta .hljs-keyword {
+
+  color: var(--color4);
+}
+
+.hljs-meta .hljs-string {
+  color: var(--color10);
+}
+
+.hljs-attr {
+  color: var(--color14);
+}
+
+.hljs-attribute {
+  color: var(--color15);
+}
+
+.hljs-name {
+  color: var(--color12);
+}
+
+.hljs-section {
+  color: var(--color6);
+}
+
+.hljs-tag {
+  color: var(--color12);
+}
+
+.hljs-variable {
+  color: var(--color15);
+}
+
+.hljs-template-variable {
+  color: var(--color15);
+}
+
+.hljs-template-tag {
+  color: var(--color4);
+}
+
+/* Inline Code */
+.inline-code {
+  color: var(--alt-txt-color) !important;
+  background-color: var(--md-bg-color) !important;
+  border: transparent !important;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/*********************************************************
+ * Blockquotes
+ *********************************************************/
+
+blockquote {
+  color: var(--alt-txt-color) !important;
+  background-color: var(--md-bg-color) !important;
+  font-style: italic;
+  border-left: 4px solid var(--accent-color) !important;
+  border-radius: 5px;
+  width: 95%;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  opacity: 1;
+}
+
+/*********************************************************
+ * Tables
+ *********************************************************/
+
+table {
+  background-color: var(--md-bg-color) !important;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+th {
+  color: var(--alt-txt-color) !important;
+  background-color: var(--md-bg-color) !important;
+  border: transparent !important;
+  padding: 10px;
+}
+
+td {
+  color: var(--main-txt-color) !important;
+  border: transparent !important;
+  padding: 10px;
+}
+
+tr {
+  background-color: var(--md-bg-color) !important;
+  border-bottom: 3px solid;
+  border-color: var(--md-fg-color);
+  padding: 10px;
+}
+
+tr:hover {
+  background-color: transparent !important;
+}

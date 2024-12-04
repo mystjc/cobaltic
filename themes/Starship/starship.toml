@@ -1,0 +1,134 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[╭](bold #344a5e)\
+$os\
+$username\
+[ ](fg:#344a5e bg:#4586c4)\
+$directory\
+[](fg:#4586c4 bg:#344a5e)\
+$git_branch\
+$git_status\
+$docker_context\
+$c\
+${custom.cpp}\
+${custom.cs}\
+$golang\
+$java\
+$kotlin\
+$lua\
+$nodejs\
+$python\
+$rust\
+$time\
+[](fg:#344a5e)
+[╰─ ](bold #344a5e)
+"""
+command_timeout = 5000
+
+# Replace default symbol in the prompt
+[character]
+success_symbol = "[](bold #344a5e)"
+
+[os]
+disabled = false
+style = "bg:#344a5e"
+
+[os.symbols]
+Arch = ""
+EndeavourOS = ""
+
+[username]
+show_always = true
+style_user = "bg:#344a5e"
+style_root = "bg:#344a5e"
+format = '[ $user ]($style)'
+
+[directory]
+style = "bg:#4586c4"
+format = "[$path ]($style)"
+
+[git_branch]
+symbol = ""
+style = "bg:#344a5e"
+format = '[ $symbol $branch]($style)'
+
+[git_status]
+style = "bg:#344a5e"
+format = '[$all_status]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:#344a5e"
+format = '[ $symbol $context]($style) $path'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#344a5e"
+format = '[  $time]($style)'
+
+# Languages
+[c]
+symbol = ""
+detect_extensions = ['c']
+style = "bg:#344a5e"
+format = '[ $symbol ($version)]($style)'
+
+[golang]
+symbol = ""
+detect_extensions = ['go']
+style = "bg:#344a5e"
+format = '[ $symbol ($version)]($style)'
+
+[java]
+symbol = ""
+detect_extensions = ['java']
+style = "bg:#344a5e"
+format = '[ $symbol ($version)]($style)'
+
+[kotlin]
+symbol = ""
+detect_extensions = ['kt']
+style = "bg:#344a5e"
+format = '[ $symbol ($version)]($style)'
+
+[lua]
+symbol = "󰢱"
+detect_extensions = ['lua']
+style = "bg:#344a5e"
+format = '[ $symbol ($version)]($style)'
+
+[nodejs]
+symbol = ""
+detect_extensions = ['js', 'ts']
+style = "bg:#344a5e"
+format = '[ $symbol ($version)]($style)'
+
+[python]
+symbol = ""
+detect_extensions = ['py']
+style = "bg:#344a5e"
+format = '[ $symbol ($version)]($style)'
+
+[rust]
+symbol = "󱘗"
+detect_extensions = ['rs']
+style = "bg:#344a5e"
+format = '[ $symbol ($version)]($style)'
+
+# Custom Languages
+[custom.cpp]
+symbol = ""
+command = "echo -n 'v' && echo -n $(cpp --version) | awk '{ print $3 }'"
+detect_extensions = ['cpp']
+style = "bg:#344a5e"
+format = '[ $symbol $output]($style)'
+
+[custom.cs]
+symbol = "󰌛"
+command = "echo -n 'v' && echo -n $(dotnet --version) | awk '{ print $1 }'"
+detect_extensions = ['cs']
+style = "bg:#344a5e"
+format = '[ $symbol $output]($style)'
